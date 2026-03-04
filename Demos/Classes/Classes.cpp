@@ -11,11 +11,15 @@ void wrapper()
 	myPlayer.PrintInventory();
 	myPlayer.IncreaseItem(2);
 	myPlayer.PrintInventory();
+
+	return;
 }
 
 int main()
 {
 	wrapper(); // Avoid false positive memory leaks by taking main out of scope
+
+	std::cout << "Hello World" << std::endl;
 
 	_CrtDumpMemoryLeaks();
 }
